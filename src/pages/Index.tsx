@@ -52,6 +52,10 @@ export default function Index() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Золотая церковная рамка вокруг сайта */}
       <div className="site-frame" aria-hidden="true">
+        <span className="sf-top" />
+        <span className="sf-bottom" />
+        <span className="sf-left" />
+        <span className="sf-right" />
         <span className="sf-corner sf-tl" />
         <span className="sf-corner sf-tr" />
         <span className="sf-corner sf-bl" />
