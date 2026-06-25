@@ -9,6 +9,7 @@ const TERMINAL_IMG =
 
 const NAV = [
   { id: 'how', label: 'Как работает' },
+  { id: 'about', label: 'О терминале' },
   { id: 'compare', label: 'Сравнение' },
   { id: 'service', label: 'Обслуживание' },
   { id: 'gallery', label: 'Галерея' },
@@ -169,8 +170,53 @@ export default function Index() {
         </div>
       </section>
 
+      {/* About terminal */}
+      <section id="about" className="py-24 bg-secondary/30 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="container relative">
+          <Ornament text="О терминале" />
+          <h2 className="text-center font-serif text-4xl lg:text-5xl font-semibold mb-6">
+            Полностью <span className="text-gradient-gold">российский продукт</span>
+          </h2>
+          <p className="text-center font-body text-lg text-cream/70 max-w-2xl mx-auto mb-16">
+            Терминал собирается в России из российских комплектующих, а программное обеспечение
+            работает на отечественной платформе и внесено в реестр ПО Минцифры России.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: 'Factory',
+                t: 'Сборка в России',
+                d: 'Терминал полностью собирается на территории России из российских комплектующих.',
+              },
+              {
+                icon: 'Cpu',
+                t: 'Отечественная платформа',
+                d: 'Программа работает на полностью российской платформе — без зарубежных зависимостей.',
+              },
+              {
+                icon: 'BadgeCheck',
+                t: 'Реестр ПО Минцифры',
+                d: 'Программное обеспечение официально внесено в реестр российского ПО Минцифры России.',
+              },
+            ].map((s) => (
+              <div
+                key={s.t}
+                className="p-8 rounded-xl bg-card border-gold-frame text-center group hover:border-gold transition-all"
+              >
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+                  <Icon name={s.icon} size={32} className="text-gold-light" />
+                </div>
+                <h3 className="font-serif text-2xl font-semibold mb-3 text-cream">{s.t}</h3>
+                <p className="font-body text-cream/60 leading-relaxed">{s.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comparison */}
-      <section id="compare" className="py-24 bg-secondary/30">
+      <section id="compare" className="py-24">
         <div className="container">
           <Ornament text="Сравнение" />
           <h2 className="text-center font-serif text-4xl lg:text-5xl font-semibold mb-16">
@@ -232,6 +278,32 @@ export default function Index() {
                 <p className="font-body text-sm text-cream/60 leading-relaxed">{s.d}</p>
               </div>
             ))}
+          </div>
+
+          {/* Geography of service */}
+          <div className="mt-10 p-8 lg:p-10 rounded-xl bg-card border-gold-frame relative overflow-hidden">
+            <div className="absolute -top-16 -left-16 w-56 h-56 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative flex flex-col lg:flex-row items-center gap-8">
+              <div className="w-20 h-20 shrink-0 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center">
+                <Icon name="MapPinned" size={40} className="text-gold-light" />
+              </div>
+              <div className="text-center lg:text-left">
+                <h3 className="font-serif text-2xl lg:text-3xl font-semibold mb-3 text-cream">
+                  Точки обслуживания <span className="text-gradient-gold">по всей России</span>
+                </h3>
+                <p className="font-body text-cream/70 leading-relaxed max-w-2xl">
+                  Гарантийное и постгарантийное обслуживание осуществляется по всей территории
+                  страны — от Калининграда до Сахалина. Где бы ни находился ваш храм, мы рядом.
+                </p>
+              </div>
+            </div>
+            <div className="relative mt-6 flex items-center justify-center gap-3 font-serif text-lg tracking-wide text-gold-light">
+              <span>Калининград</span>
+              <span className="flex-1 max-w-[120px] h-px bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
+              <Icon name="Plane" size={20} className="text-gold" />
+              <span className="flex-1 max-w-[120px] h-px bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
+              <span>Сахалин</span>
+            </div>
           </div>
         </div>
       </section>
