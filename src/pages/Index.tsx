@@ -7,6 +7,9 @@ import { Textarea } from '@/components/ui/textarea';
 const TERMINAL_IMG =
   'https://cdn.poehali.dev/projects/01f0a21a-86a3-4452-bf5a-3c9ac8a7e7b7/files/498013fc-9e37-4fa8-bfe6-918140c7bee3.jpg';
 
+const LOGO_IMG =
+  'https://cdn.poehali.dev/projects/01f0a21a-86a3-4452-bf5a-3c9ac8a7e7b7/bucket/5b749bff-fafc-4cab-80cd-af2c3f32c2b4.jpg';
+
 const NAV = [
   { id: 'how', label: 'Как работает' },
   { id: 'about', label: 'О терминале' },
@@ -18,6 +21,17 @@ const NAV = [
 
 const Cross = () => (
   <span className="text-gold-light text-2xl leading-none select-none">✣</span>
+);
+
+const Logo = ({ size = 44 }: { size?: number }) => (
+  <img
+    src={LOGO_IMG}
+    alt="Логотип Лепта"
+    width={size}
+    height={size}
+    className="rounded-full border border-gold/40 object-cover shrink-0"
+    style={{ width: size, height: size }}
+  />
 );
 
 const Ornament = ({ text }: { text?: string }) => (
@@ -40,7 +54,7 @@ export default function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-gold/20">
         <div className="container flex items-center justify-between h-20">
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-3">
-            <Cross />
+            <Logo size={44} />
             <span className="font-script text-3xl text-gradient-gold leading-none pt-1">Лепта</span>
           </button>
           <nav className="hidden lg:flex items-center gap-8">
@@ -403,7 +417,7 @@ export default function Index() {
       <footer className="border-t border-gold/20 py-10">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Cross />
+            <Logo size={40} />
             <span className="font-script text-2xl text-gradient-gold pt-1">Лепта</span>
           </div>
           <p className="font-body text-sm text-cream/50">
