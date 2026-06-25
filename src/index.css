@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 38 30% 8%;
+    --foreground: 42 45% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 28% 11%;
+    --card-foreground: 42 45% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 28% 11%;
+    --popover-foreground: 42 45% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 42 50% 54%;
+    --primary-foreground: 38 40% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 36 25% 16%;
+    --secondary-foreground: 42 45% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 36 20% 18%;
+    --muted-foreground: 42 18% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 42 55% 60%;
+    --accent-foreground: 38 40% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 42 45% 92%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 42 25% 24%;
+    --input: 42 25% 24%;
+    --ring: 42 50% 54%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -96,6 +96,61 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
   }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(
+      110deg,
+      #9a7320 0%,
+      #e8d196 25%,
+      #fff6d9 50%,
+      #e8d196 75%,
+      #9a7320 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .text-shimmer {
+    background: linear-gradient(110deg, #c9a24b 0%, #fff6d9 50%, #c9a24b 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+  .border-gold-frame {
+    border: 1px solid rgba(201, 162, 75, 0.35);
+    box-shadow:
+      0 0 0 1px rgba(201, 162, 75, 0.1),
+      inset 0 0 30px rgba(201, 162, 75, 0.05);
+  }
+  .bg-radial-gold {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(201, 162, 75, 0.18) 0%,
+      transparent 70%
+    );
+  }
+}
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #c9a24b;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(to right, transparent, #c9a24b, transparent);
 }
