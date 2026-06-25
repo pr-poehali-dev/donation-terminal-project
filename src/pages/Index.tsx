@@ -185,7 +185,7 @@ export default function Index() {
       </section>
 
       {/* About terminal */}
-      <section id="about" className="py-24 bg-secondary/30 relative overflow-hidden">
+      <section id="about" className="py-24 bg-damask relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl pointer-events-none" />
         <div className="container relative">
           <Ornament text="О терминале" />
@@ -323,7 +323,7 @@ export default function Index() {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" className="py-24 bg-secondary/30">
+      <section id="gallery" className="py-24 bg-damask">
         <div className="container">
           <Ornament text="Галерея" />
           <h2 className="text-center font-serif text-4xl lg:text-5xl font-semibold mb-16">
@@ -377,7 +377,7 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="p-8 rounded-xl bg-card border-gold-frame relative overflow-hidden">
+          <div className="p-8 rounded-xl bg-card border-gold-frame frame-corners relative overflow-hidden">
             <div className="absolute -top-16 -right-16 w-48 h-48 bg-gold/10 rounded-full blur-3xl" />
             <h3 className="font-serif text-3xl font-semibold mb-6 relative">Заказать терминал</h3>
             <form className="space-y-4 relative" onSubmit={(e) => e.preventDefault()}>
