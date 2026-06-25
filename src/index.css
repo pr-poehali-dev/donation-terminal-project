@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 38 30% 8%;
-    --foreground: 42 45% 92%;
+    --background: 44 56% 97%;
+    --foreground: 36 35% 18%;
 
-    --card: 36 28% 11%;
-    --card-foreground: 42 45% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 36 35% 18%;
 
-    --popover: 36 28% 11%;
-    --popover-foreground: 42 45% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 36 35% 18%;
 
-    --primary: 42 50% 54%;
-    --primary-foreground: 38 40% 8%;
+    --primary: 40 55% 48%;
+    --primary-foreground: 44 56% 98%;
 
-    --secondary: 36 25% 16%;
-    --secondary-foreground: 42 45% 92%;
+    --secondary: 44 48% 92%;
+    --secondary-foreground: 36 35% 22%;
 
-    --muted: 36 20% 18%;
-    --muted-foreground: 42 18% 65%;
+    --muted: 44 40% 90%;
+    --muted-foreground: 36 18% 42%;
 
-    --accent: 42 55% 60%;
-    --accent-foreground: 38 40% 8%;
+    --accent: 42 60% 55%;
+    --accent-foreground: 36 40% 16%;
 
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 42 45% 92%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 42 25% 24%;
-    --input: 42 25% 24%;
-    --ring: 42 50% 54%;
+    --border: 42 35% 82%;
+    --input: 42 35% 82%;
+    --ring: 40 55% 48%;
 
     --radius: 0.25rem;
 
@@ -104,11 +104,11 @@
   .text-gradient-gold {
     background: linear-gradient(
       110deg,
-      #9a7320 0%,
-      #e8d196 25%,
-      #fff6d9 50%,
-      #e8d196 75%,
-      #9a7320 100%
+      #8a6418 0%,
+      #c9a24b 30%,
+      #b8862b 50%,
+      #c9a24b 70%,
+      #8a6418 100%
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -126,10 +126,10 @@
     animation: shimmer 4s linear infinite;
   }
   .border-gold-frame {
-    border: 1px solid rgba(201, 162, 75, 0.35);
+    border: 1px solid rgba(201, 162, 75, 0.45);
     box-shadow:
-      0 0 0 1px rgba(201, 162, 75, 0.1),
-      inset 0 0 30px rgba(201, 162, 75, 0.05);
+      0 4px 24px rgba(154, 115, 32, 0.08),
+      inset 0 0 30px rgba(201, 162, 75, 0.04);
   }
   .bg-radial-gold {
     background: radial-gradient(

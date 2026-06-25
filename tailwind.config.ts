@@ -25,13 +25,13 @@ export default {
 			},
 			colors: {
 				gold: {
-					DEFAULT: '#C9A24B',
-					light: '#E8D196',
+					DEFAULT: '#B8862B',
+					light: '#C9A24B',
 					dark: '#9A7320',
 					deep: '#6B4E11',
 				},
-				ink: '#1C1710',
-				cream: '#F8F1E0',
+				ink: '#3A2E18',
+				cream: '#4A3D28',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
