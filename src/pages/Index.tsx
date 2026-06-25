@@ -50,6 +50,18 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* Золотая церковная рамка вокруг сайта */}
+      <div className="site-frame" aria-hidden="true">
+        <span className="sf-top" />
+        <span className="sf-bottom" />
+        <span className="sf-left" />
+        <span className="sf-right" />
+        <span className="sf-corner sf-tl" />
+        <span className="sf-corner sf-tr" />
+        <span className="sf-corner sf-bl" />
+        <span className="sf-corner sf-br" />
+      </div>
+
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-gold/20">
         <div className="container flex items-center justify-between h-20">
